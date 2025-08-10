@@ -19,8 +19,13 @@
 
 - type: latheRecipe
   parent: BaseCarpetRecipe
-  id: CarpetPink
-  result: FloorCarpetItemPink
+  id: CarpetFancyBlack
+  result: FloorCarpetItemFancyBlack
+
+- type: latheRecipe
+  parent: BaseCarpetRecipe
+  id: CarpetFancyRed
+  result: FloorCarpetItemFancyRed
 
 - type: latheRecipe
   parent: BaseCarpetRecipe
@@ -49,5 +54,5 @@
 
 - type: latheRecipe
   parent: BaseCarpetRecipe
-  id: CarpetWhite
-  result: FloorCarpetItemWhite
+  id: CarpetFancyBlue
+  result: FloorCarpetItemFancyBlue

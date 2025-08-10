@@ -703,3 +703,11 @@ ClothingNeckHeadphones: ClothingMultipleHeadphones
 
 # 2025-08-01
 FoodDonutJellySlugcat: FoodDonutJellyScurret
+
+# 2025-08-10
+CarpetWhite: CarpetBlue
+CarpetSBlue: CarpetCyan
+CarpetPink: CarpetPurple
+FloorCarpetItemWhite: FloorCarpetItemBlue
+FloorCarpetItemSkyBlue: FloorCarpetItemCyan
+FloorCarpetItemPink: FloorCarpetItemPurple
