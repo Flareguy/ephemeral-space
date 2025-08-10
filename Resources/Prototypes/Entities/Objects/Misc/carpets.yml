@@ -117,7 +117,17 @@
 
 # Ephemeral Space Start
 - type: entity
+  abstract: true
   parent: FloorCarpetItemRed
+  id: FloorCarpetItemES
+  components:
+  - type: Sprite
+    sprite: _ES/Objects/Tiles/es_carpets.rsi
+  - type: Icon
+    sprite: _ES/Objects/Tiles/es_carpets.rsi
+
+- type: entity
+  parent: FloorCarpetItemES
   id: FloorCarpetItemFancyBlack
   suffix: Fancy Black
   components:

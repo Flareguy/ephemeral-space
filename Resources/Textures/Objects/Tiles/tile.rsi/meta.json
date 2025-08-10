@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/c6e3401f2e7e1e55c57060cdf956a98ef1fefc24, additional attributions available in the Resources/Textures/Tiles/attributions.yml file. Ice tile and Snow tile modifications, Astreroid tile and in-hands created by Southbridge-fur (github), Astro-asteroid by kosticia (Github)",
+    "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/c6e3401f2e7e1e55c57060cdf956a98ef1fefc24, additional attributions available in the Resources/Textures/Tiles/attributions.yml file. Ice tile and Snow tile modifications, Astreroid tile and in-hands created by Southbridge-fur (github), Astro-asteroid by kosticia (Github), carpet-black icon, carpet-fancyred & carpet-cyan icons & inhands made by Flareguy (github)",
     "size": {
         "x": 32,
         "y": 32
@@ -169,9 +169,6 @@
             "name": "carpet-blue"
         },
         {
-            "name": "carpet-skyblue"
-        },
-        {
             "name": "carpet-green"
         },
         {
@@ -184,13 +181,16 @@
             "name": "carpet-red"
         },
         {
-            "name": "carpet-pink"
-        },
-        {
             "name": "carpet-cyan"
         },
         {
-            "name": "carpet-white"
+            "name": "carpet-fancyred"
+        },
+        {
+            "name": "carpet-fancyblack"
+        },
+        {
+            "name": "carpet-fancyblue"
         },
         {
             "name": "hydro"
@@ -367,14 +367,6 @@
             "directions": 4
         },
         {
-            "name": "carpet-skyblue-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "carpet-skyblue-inhand-right",
-            "directions": 4
-        },
-        {
             "name": "carpet-green-inhand-left",
             "directions": 4
         },
@@ -399,6 +391,30 @@
             "directions": 4
         },
         {
+            "name": "carpet-fancyred-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "carpet-fancyred-inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "carpet-fancyblack-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "carpet-fancyblack-inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "carpet-fancyblue-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "carpet-fancyblue-inhand-right",
+            "directions": 4
+        },
+        {
             "name": "carpet-red-inhand-left",
             "directions": 4
         },
@@ -407,27 +423,11 @@
             "directions": 4
         },
         {
-            "name": "carpet-pink-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "carpet-pink-inhand-right",
-            "directions": 4
-        },
-        {
             "name": "carpet-cyan-inhand-left",
             "directions": 4
         },
         {
             "name": "carpet-cyan-inhand-right",
-            "directions": 4
-        },
-        {
-            "name": "carpet-white-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "carpet-white-inhand-right",
             "directions": 4
         },
         {
@@ -581,50 +581,6 @@
         },
         {
             "name": "dark-squiggly"
-        },
-	{
-	    "name": "white-marble"
-	},
-	{
-            "name": "white-marble-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "white-marble-inhand-right",
-            "directions": 4
-        },
-        {
-            "name": "dark-marble"
-        },
-        {
-            "name": "dark-marble-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "dark-marble-inhand-right",
-            "directions": 4
-        },
-        {
-            "name": "plasmarble"
-        },
-        {
-            "name": "plasmarble-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "plasmarble-inhand-right",
-            "directions": 4
-        },
-        {
-            "name": "uranium-marble"
-        },
-        {
-            "name": "uranium-marble-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "uranium-marble-inhand-right",
-            "directions": 4
         }
     ]
 }
