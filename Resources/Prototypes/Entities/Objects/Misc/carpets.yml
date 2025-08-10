@@ -115,6 +115,7 @@
     doAfter: 0.5
     removeOnInteract: true
 
+# Ephemeral Space Start
 - type: entity
   parent: FloorCarpetItemRed
   id: FloorCarpetItemFancyBlack
@@ -162,3 +163,5 @@
     prototype: CarpetFancyRed
     doAfter: 0.5
     removeOnInteract: true
+    
+# Ephemeral Space End

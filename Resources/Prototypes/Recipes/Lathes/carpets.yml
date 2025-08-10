@@ -19,16 +19,6 @@
 
 - type: latheRecipe
   parent: BaseCarpetRecipe
-  id: CarpetFancyBlack
-  result: FloorCarpetItemFancyBlack
-
-- type: latheRecipe
-  parent: BaseCarpetRecipe
-  id: CarpetFancyRed
-  result: FloorCarpetItemFancyRed
-
-- type: latheRecipe
-  parent: BaseCarpetRecipe
   id: CarpetBlue
   result: FloorCarpetItemBlue
 
@@ -52,7 +42,21 @@
   id: CarpetCyan
   result: FloorCarpetItemCyan
 
+# Ephemeral Space Start
+
 - type: latheRecipe
   parent: BaseCarpetRecipe
   id: CarpetFancyBlue
   result: FloorCarpetItemFancyBlue
+
+- type: latheRecipe
+  parent: BaseCarpetRecipe
+  id: CarpetFancyBlack
+  result: FloorCarpetItemFancyBlack
+
+- type: latheRecipe
+  parent: BaseCarpetRecipe
+  id: CarpetFancyRed
+  result: FloorCarpetItemFancyRed
+
+# Ephemeral Space End
