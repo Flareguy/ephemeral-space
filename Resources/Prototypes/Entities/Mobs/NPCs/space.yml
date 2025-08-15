@@ -375,6 +375,7 @@
   categories: [ HideSpawnMenu ] # Soft-removed
   components:
     - type: SalvageMobRestrictions
+# ES End
 
 - type: entity
   parent: SimpleSpaceMobBase
@@ -384,6 +385,16 @@
   components:
   - type: Body
     prototype: Mouse
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: false
+    allowMovement: true
+    name: ghost-role-information-snail-name
+    description: ghost-role-information-snail-description
+    rules: ghost-role-information-freeagent-rules
+    mindRoles:
+    - MindRoleGhostRoleFreeAgentHarmless
+  - type: GhostTakeoverAvailable
   - type: Emoting
   - type: Sprite
     drawdepth: SmallMobs
@@ -518,6 +529,9 @@
   id: MobSnailInstantDeath
   suffix: Smite
   components:
+  - type: GhostRole
+    mindRoles:
+    - MindRoleGhostRoleFreeAgent
   - type: MobStateActions
     actions:
       Alive:
@@ -534,6 +548,10 @@
   id: MobSnailSpeed
   suffix: Speed
   components:
+  - type: GhostRole
+    name: ghost-role-information-snailspeed-name
+    description: ghost-role-information-snailspeed-description
+    rules: ghost-role-information-freeagent-rules
   - type: Sprite
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
@@ -559,6 +577,10 @@
   components:
   - type: Body
     prototype: Mothroach
+  - type: GhostRole
+    name: ghost-role-information-snoth-name
+    description: ghost-role-information-snoth-description
+    rules: ghost-role-information-freeagent-rules
   - type: Sprite
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
@@ -571,4 +593,3 @@
         Base: snothdead
       Dead:
         Base: snothdead
-# ES End
