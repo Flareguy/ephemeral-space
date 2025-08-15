@@ -47,7 +47,7 @@
   - HumanHairThinningrear
   - HumanHairE
   femaleHair:
-  #  - HumanHairAntenna
+  - HumanHairAntenna
   #  - HumanHairBeehive
   #  - HumanHairBeehivev2
   #  - HumanHairBob
@@ -109,7 +109,7 @@
   - HumanHairAfro
   - HumanHairAfro2
   - HumanHairBigafro
-  - HumanHairPulato
+  # - HumanHairPulato
   - HumanHairLongBedhead
   # - HumanHairLongBedhead2
   - HumanHairFloorlengthBedhead

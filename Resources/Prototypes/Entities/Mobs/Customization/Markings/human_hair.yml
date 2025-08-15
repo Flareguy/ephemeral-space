@@ -19,19 +19,13 @@
   sprites:
     - sprite: _ES/Mobs/Customization/human_hair.rsi
       state: bigafro
-# ///// ES Start /////
-# TODO: Resprite all of the commented out hairs so they can be enabled again
-# Because the resprite hairs do not fit well, we are using the classic space station hairs as a base.
-# Unfortunately, a lot of them suck / don't fit the artstyle, so they have been disabled until they are resprited.
-# For my own sanity - every comment block from here on out is an ES change.
-#
-#- type: marking
-#  id: HumanHairAntenna
-#  bodyPart: Hair
-#  markingCategory: Hair
-#  sprites:
-#    - sprite: _ES/Mobs/Customization/human_hair.rsi
-#      state: antenna
+- type: marking
+  id: HumanHairAntenna
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _ES/Mobs/Customization/human_hair.rsi
+      state: antenna
 - type: marking
   id: HumanHairBalding
   bodyPart: Hair
@@ -53,6 +47,12 @@
   sprites:
     - sprite: _ES/Mobs/Customization/human_hair.rsi
       state: bedheadv2
+# ///// ES Start /////
+# TODO: Resprite all of the commented out hairs so they can be enabled again
+# Because the resprite hairs do not fit well, we are using the classic space station hairs as a base.
+# Unfortunately, a lot of them suck / don't fit the artstyle, so they have been disabled until they are resprited.
+# For my own sanity - every comment block from here on out is an ES change.
+#
 #- type: marking
 #  id: HumanHairBedheadv3
 #  bodyPart: Hair
