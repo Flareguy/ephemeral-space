@@ -60,11 +60,8 @@
     - FootstepSound
   - type: Puller
     needsHands: false
-  - type: PointLight
-    radius: 1.2
-    energy: 2
-    color: "#4faffb"
-  - type: GhostTakeoverAvailable
+# ES Start
+# ES End
   - type: Speech
     speechVerb: LargeMob
 
