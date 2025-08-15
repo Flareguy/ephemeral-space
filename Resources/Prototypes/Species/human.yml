@@ -65,7 +65,7 @@
   - HumanHairBun
   - HumanHairBunhead2
   - HumanHairBun3
-  - HumanHairLargebun
+  # - HumanHairLargebun
   # - HumanHairClassicFloorlengthBedhead
   # - HumanHairClassicWisp
   - HumanHairCurls
@@ -95,7 +95,7 @@
   - HumanHairLongstraightponytail
   - HumanHairCountry
   - HumanHairFringetail
-  - HumanHairSidetail
+  # - HumanHairSidetail
   - HumanHairSidetail2
   - HumanHairSidetail3
   # - HumanHairSidetail4
@@ -109,9 +109,9 @@
   - HumanHairAfro
   - HumanHairAfro2
   - HumanHairBigafro
-#  - HumanHairPulato
-#  - HumanHairLongBedhead
-  - HumanHairLongBedhead2
+  - HumanHairPulato
+  - HumanHairLongBedhead
+  # - HumanHairLongBedhead2
   - HumanHairFloorlengthBedhead
   - HumanHairBobcurl
   - HumanHairTightbun
@@ -120,7 +120,7 @@
   - HumanHairBusiness2
   - HumanHairBusiness3
   - HumanHairBusiness4
-  - HumanHairBuzzcut
+  # - HumanHairBuzzcut
   - HumanHairCia
   # - HumanHairClassicAfro
   # - HumanHairClassicBigAfro

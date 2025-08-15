@@ -284,7 +284,6 @@
   sprites:
     - sprite: _ES/Mobs/Customization/human_hair.rsi
       state: business4
-# ES Start
 #- type: marking
 #  id: HumanHairBuzzcut
 #  bodyPart: Hair
@@ -320,7 +319,6 @@
   # sprites:
     # - sprite: _ES/Mobs/Customization/human_hair.rsi
       # state: classicbusiness
-# ES Start
 # - type: marking
   # id: HumanHairClassicCia
   # bodyPart: Hair
