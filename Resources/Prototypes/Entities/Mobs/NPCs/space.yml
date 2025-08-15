@@ -67,6 +67,7 @@
   - type: GhostTakeoverAvailable
   - type: Speech
     speechVerb: LargeMob
+
 # ES Start
 - type: entity
   name: space bear
@@ -107,12 +108,12 @@
     interactFailureString: petting-failure-bear
     interactSuccessSound:
       path: /Audio/Animals/sloth_squeak.ogg
+# ES End
 
 - type: entity
   id: MobBearSpaceSalvage
   parent: MobBearSpace
   suffix: "Salvage Ruleset"
-  categories: [ HideSpawnMenu ] # Soft-removed
   components:
   - type: SalvageMobRestrictions
 
@@ -121,7 +122,6 @@
   id: MobKangarooSpace
   parent: [MobSpaceBasic, StripableInventoryBase]
   description: It looks friendly. Why don't you give it a hug?
-  categories: [ HideSpawnMenu ] # Soft-removed
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -282,7 +282,6 @@
   id: MobCobraSpace
   parent: MobSpaceBasic
   description: Long fangs and a glowing hood, and the alluring look begs to come closer.
-  categories: [ HideSpawnMenu ] # Soft-removed
   components:
     - type: Sprite
       drawdepth: Mobs
@@ -372,10 +371,8 @@
   id: MobCobraSpaceSalvage
   parent: MobCobraSpace
   suffix: "Salvage Ruleset"
-  categories: [ HideSpawnMenu ] # Soft-removed
   components:
     - type: SalvageMobRestrictions
-# ES End
 
 - type: entity
   parent: SimpleSpaceMobBase
