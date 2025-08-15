@@ -363,13 +363,13 @@
   # sprites:
     # - sprite: _ES/Mobs/Customization/human_hair.rsi
       # state: classicwisp
-# - type: marking
-  # id: HumanHairCoffeehouse
-  # bodyPart: Hair
-  # markingCategory: Hair
-  # sprites:
-    # - sprite: _ES/Mobs/Customization/human_hair.rsi
-      # state: coffeehouse
+- type: marking
+  id: HumanHairCoffeehouse
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _ES/Mobs/Customization/human_hair.rsi
+      state: coffeehouse
 - type: marking
   id: HumanHairCombover
   bodyPart: Hair
