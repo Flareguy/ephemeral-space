@@ -1,5 +1,5 @@
 - type: construction
-  id: CrateTrashBin
+  id: ESCrateTrashBin
   graph: TrashBin
   startNode: start
   targetNode: trashbin
@@ -7,7 +7,7 @@
   objectType: Structure
 
 - type: construction
-  id: CrateTrashBinSecure
+  id: ESCrateTrashBinSecure
   graph: TrashBinSecure
   startNode: start
   targetNode: trashbinsecure
