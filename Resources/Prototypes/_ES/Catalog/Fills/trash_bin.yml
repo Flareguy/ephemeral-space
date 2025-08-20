@@ -1,6 +1,6 @@
 - type: entity
-  parent: CrateTrashBin
-  id: CrateTrashBinFilledRandom
+  parent: ESCrateTrashBin
+  id: ESCrateTrashBinFilledRandom
   suffix: Filled, Random
   components:
   - type: EntityTableContainerFill

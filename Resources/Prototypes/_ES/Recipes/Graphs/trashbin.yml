@@ -11,7 +11,7 @@
             doAfter: 3
 
    - node: trashbin
-     entity: CrateTrashBin
+     entity: ESCrateTrashBin
      edges:
        - to: start
          steps:
