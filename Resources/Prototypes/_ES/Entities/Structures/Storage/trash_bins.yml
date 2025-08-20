@@ -1,7 +1,8 @@
 # Base trash bin
 - type: entity
   abstract: true
-  id: TrashBinBase
+  id: ESTrashBinBase
+  suffix: ES
   components:
   - type: Fixtures
     fixtures:
@@ -30,8 +31,8 @@
 
 # Trash bin
 - type: entity
-  parent: [TrashBinBase, CrateBaseWeldable]
-  id: CrateTrashBin
+  parent: [ESTrashBinBase, CrateBaseWeldable]
+  id: ESCrateTrashBin
   name: trash bin
   description: A low-tech trash bin.
   components:
@@ -47,8 +48,8 @@
 
 # Secure trash bin
 - type: entity
-  parent: [TrashBinBase, CrateBaseSecure]
-  id: CrateTrashBinSecure
+  parent: [ESTrashBinBase, CrateBaseSecure]
+  id: ESCrateTrashBinSecure
   name: secure trash bin
   description: A fancy, secure trash bin. It's useful for disposing of sensitive documents.
   components:
