@@ -41,7 +41,7 @@
   - type: Sprite
     sprite: _ES/Structures/Storage/trash_bin.rsi
   - type: Construction
-    graph: TrashBin
+    graph: ESTrashBin
     node: trashbin
     containers:
     - entity_storage
