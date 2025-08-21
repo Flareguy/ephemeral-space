@@ -1,6 +1,6 @@
 - type: construction
   id: ESCrateTrashBin
-  graph: TrashBin
+  graph: ESTrashBin
   startNode: start
   targetNode: trashbin
   category: construction-category-storage
@@ -8,7 +8,7 @@
 
 - type: construction
   id: ESCrateTrashBinSecure
-  graph: TrashBinSecure
+  graph: ESTrashBinSecure
   startNode: start
   targetNode: trashbinsecure
   category: construction-category-storage

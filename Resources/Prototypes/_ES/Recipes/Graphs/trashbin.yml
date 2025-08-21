@@ -1,5 +1,5 @@
 - type: constructionGraph
-  id: TrashBin
+  id: ESTrashBin
   start: start
   graph:
    - node: start

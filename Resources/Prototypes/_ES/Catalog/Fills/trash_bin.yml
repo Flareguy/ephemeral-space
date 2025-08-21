@@ -9,7 +9,7 @@
         tableId: TrashBinLoot
 
 - type: entityTable
-  id: TrashBinLoot # A version of MaintenanceLockerLoot, but with lower probabilities
+  id: ESTrashBinLoot # A version of MaintenanceLockerLoot, but with lower probabilities
   table: !type:AllSelector
     children:
     - id: StrangePill
