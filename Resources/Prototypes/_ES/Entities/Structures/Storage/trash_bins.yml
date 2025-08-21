@@ -73,7 +73,7 @@
       offset: "-0.5,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: Construction
-    graph: TrashBinSecure
+    graph: ESTrashBinSecure
     node: trashbinsecure
     containers:
     - entity_storage
