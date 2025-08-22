@@ -154,10 +154,6 @@
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StrongMetallic
-  - type: RCDDeconstructable
-    cost: 6
-    delay: 8
-    fx: EffectRCDDeconstruct8
   - type: PlacementReplacement
     key: walls
   - type: StaticPrice
