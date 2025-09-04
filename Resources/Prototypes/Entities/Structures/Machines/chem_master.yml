@@ -9,13 +9,13 @@
   - type: Sprite
     sprite: Structures/Machines/mixer.rsi
 # ES Start
-    norot: true
+    noRot: true
+# ES End
     layers:
     - state: mixer_empty
     - state: mixer_screens
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
-# ES End
   - type: Icon
     sprite: Structures/Machines/mixer.rsi
     state: mixer_empty
