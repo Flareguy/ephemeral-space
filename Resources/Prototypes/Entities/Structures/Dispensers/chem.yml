@@ -9,6 +9,7 @@
     sprite: Structures/dispensers.rsi
 # ES Start
     state: industrial
+    norot: True
 # ES End
   - type: Storage
     openOnActivate: false
