@@ -1,0 +1,80 @@
+- type: entity
+  id: ESWeaponEnergyRifle
+  name: energy rifle
+  suffix: ES
+  description: A energy-based longarm that can fire pulse bolts that go through windows. Colloquially referred to as a "laser gun."
+  parent: BaseWeaponBattery
+  components:
+  - type: Item
+    size: Large
+  - type: Sprite
+    sprite: _ES/Objects/Weapons/Guns/laser_gun.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-0
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance
+  - type: Clothing
+    sprite: _ES/Objects/Weapons/Guns/laser_gun.rsi
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    projectileSpeed: 20
+  - type: ProjectileBatteryAmmoProvider
+    proto: ESEnergyBolt
+    fireCost: 100
+  - type: StaticPrice
+    price: 420
+
+# These are not as different from upstream as they should be, but there's little that can be done about it right now until some issues are fixed. For a big TODO:
+# Make disabler bolts go through windows, add duplicate taser bolts so upstream balance changes don't interfere
+# Update the BatteryWeaponFireModes system so that it can support seperate gunshot sounds / sprites per fire mode. Then use taser.ogg instead of taser2 for the taser firing mode, and make the sprites switch depending on the mode.
+- type: entity
+  parent: [BaseWeaponBatterySmall, BaseSecurityContraband]
+  id: ESWeaponHybridTaser
+  name: hybrid taser
+  suffix: ES
+  description: An energy-based stun gun used by security teams to subdue targets nonlethally.
+  components:
+  - type: Tag
+    tags:
+    - Taser
+    - Sidearm
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/taser.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-0
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Item
+    heldPrefix: taser4
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Belt
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletTaser
+    fireCost: 200
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: BulletTaser
+      fireCost: 100
+    - proto: BulletDisabler
+      fireCost: 62.5
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance

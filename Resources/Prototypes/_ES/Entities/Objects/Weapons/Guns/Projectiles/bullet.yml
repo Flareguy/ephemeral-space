@@ -1,3 +1,4 @@
+# Handgun bullets
 - type: entity
   parent: BaseBullet
   id: ESBullet9mm
@@ -19,3 +20,73 @@
     damage:
       types:
         Piercing: 40
+
+# Shotgun bullets
+- type: entity
+  id: ESPelletShotgun
+  name: pellet
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: buckshot
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 10
+
+- type: entity
+  id: ESPelletShotgunSpread
+  categories: [ HideSpawnMenu ]
+  parent: ESPelletShotgun
+  components:
+  - type: ProjectileSpread
+    proto: PelletShotgun
+    count: 6
+    spread: 15
+
+- type: entity
+  id: ESPelletShotgunSlug
+  name: slug pellet
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: slug
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 40
+
+- type: entity
+  id: ESPelletShotgunBeanbag
+  name: beanbag pellet
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: buckshot
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 10
+  - type: StaminaDamageOnCollide
+    damage: 40 # 3 hits to stun
+
+# Energy ""bullets""
+# Ideally, this prototype would reconstruct BulletLaser, but doing that causes the game to crash for no discernable reason, so whatever.
+# Unless someone else can figure that out, we just have to hope that upstream doesn't remove projectile lasers going through windows or adds anything to the energy turret laser prototype that would mess up the properties of this.
+- type: entity
+  name: laser bolt
+  id: ESEnergyBolt
+  parent: BulletEnergyTurretLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 18
