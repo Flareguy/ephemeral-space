@@ -58,6 +58,7 @@
   parent: ESWeaponDoubleBarrelShotgun
   id: ESWeaponDoubleBarrelShotgunNonlethal
   components:
+  - type: BallisticAmmoProvider
     proto: ESShellShotgunBeanbag
   - type: Gun
     fireRate: 4
