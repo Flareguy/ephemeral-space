@@ -33,9 +33,7 @@
   - type: StaticPrice
     price: 420
 
-# These are not as different from upstream as they should be, but there's little that can be done about it right now until some issues are fixed. For a big TODO:
-# Make disabler bolts go through windows, add duplicate taser bolts so upstream balance changes don't interfere
-# Update the BatteryWeaponFireModes system so that it can support seperate gunshot sounds / sprites per fire mode. Then use taser.ogg instead of taser2 for the taser firing mode, and make the sprites switch depending on the mode.
+# TODO: Try giving this a small pointlight to see if it looks good, make its disabler bolts go through windows, and make this actually use the disable mode sprites.
 - type: entity
   parent: [BaseWeaponBatterySmall, BaseSecurityContraband]
   id: ESWeaponHybridTaser
@@ -48,13 +46,10 @@
     - Taser
     - Sidearm
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Battery/taser.rsi
+    sprite: _ES/Objects/Weapons/Guns/hybrid_taser.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
-    - state: mag-unshaded-0
-      map: ["enum.GunVisualLayers.MagUnshaded"]
-      shader: unshaded
   - type: Item
     heldPrefix: taser4
   - type: Clothing
@@ -70,9 +65,13 @@
   - type: BatteryWeaponFireModes
     fireModes:
     - proto: BulletTaser
-      fireCost: 100
+      fireCost: 200
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/taser.ogg
     - proto: BulletDisabler
       fireCost: 62.5
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
   - type: MagazineVisuals
     magState: mag
     steps: 5
