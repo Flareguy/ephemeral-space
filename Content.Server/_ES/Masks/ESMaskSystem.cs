@@ -5,6 +5,7 @@ using Content.Server._ES.Masks.Components;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
 using Content.Server.Mind;
+using Content.Server.Objectives;
 using Content.Server.Roles;
 using Content.Server.Roles.Jobs;
 using Content.Shared._ES.Masks;
@@ -27,13 +28,13 @@ public sealed class ESMaskSystem : ESSharedMaskSystem
 {
     [Dependency] private readonly IChatManager _chat = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ESAuditionsSystem _esAuditions = default!;
     [Dependency] private readonly EntityTableSystem _entityTable = default!;
     [Dependency] private readonly GameTicker _gameTicker = default!;
     [Dependency] private readonly JobSystem _job = default!;
     [Dependency] private readonly MindSystem _mind = default!;
+    [Dependency] private readonly ObjectivesSystem _objectives = default!;
     [Dependency] private readonly RoleSystem _role = default!;
 
     private static readonly EntProtoId<ESMaskRoleComponent> MindRole = "ESMindRoleMask";
@@ -43,9 +44,27 @@ public sealed class ESMaskSystem : ESSharedMaskSystem
     {
         base.Initialize();
 
+        SubscribeLocalEvent<ESTroupeRuleComponent, MapInitEvent>(OnMapInit);
+
         SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawnComplete);
         SubscribeLocalEvent<RulePlayerJobsAssignedEvent>(OnRulePlayerJobsAssigned);
         SubscribeLocalEvent<GetVerbsEvent<Verb>>(GetVerbs);
+    }
+
+    private void OnMapInit(Entity<ESTroupeRuleComponent> ent, ref MapInitEvent args)
+    {
+        var troupe = PrototypeManager.Index(ent.Comp.Troupe);
+        var objectives = _entityTable.GetSpawns(troupe.Objectives);
+
+        var dummyMind = _mind.CreateMind(null);
+
+        foreach (var objective in objectives)
+        {
+            if (!_objectives.TryCreateObjective(dummyMind, objective, out var objectiveUid))
+                continue;
+            ent.Comp.AssociatedObjectives.Add(objectiveUid.Value);
+        }
+        Del(dummyMind);
     }
 
     private void OnPlayerSpawnComplete(PlayerSpawnCompleteEvent ev)
@@ -74,7 +93,7 @@ public sealed class ESMaskSystem : ESSharedMaskSystem
             !TryComp<ActorComponent>(args.Target, out var actorComp))
             return;
 
-        foreach (var mask in _prototypeManager.EnumeratePrototypes<ESMaskPrototype>())
+        foreach (var mask in PrototypeManager.EnumeratePrototypes<ESMaskPrototype>())
         {
             if (mask.Abstract)
                 continue;
@@ -84,7 +103,7 @@ public sealed class ESMaskSystem : ESSharedMaskSystem
                 Category = ESMask,
                 Text = Loc.GetString("es-verb-apply-mask-name",
                     ("name", Loc.GetString(mask.Name)),
-                    ("troupe", Loc.GetString(_prototypeManager.Index(mask.Troupe).Name))),
+                    ("troupe", Loc.GetString(PrototypeManager.Index(mask.Troupe).Name))),
                 Message = Loc.GetString("es-verb-apply-mask-desc", ("mask", Loc.GetString(mask.Name))),
                 Priority = HashCode.Combine(mask.Troupe, mask.Name),
                 ConfirmationPopup = true,
@@ -96,7 +115,7 @@ public sealed class ESMaskSystem : ESSharedMaskSystem
                     // For now, this is just for testing and doesn't need to necessarily support everything
                     // In a future ideal implementation, every troupe should have an associated "minimum viable rule"
                     // such that if a given troupe does not have a corresponding rule, one can be created.
-                    ApplyMask((mind, mindComp), mask);
+                    ApplyMask((mind, mindComp), mask, null);
                 },
             };
             args.Verbs.Add(verb);
@@ -120,7 +139,7 @@ public sealed class ESMaskSystem : ESSharedMaskSystem
 
     public bool TryAssignToTroupe(Entity<ESTroupeRuleComponent> ent, ref List<ICommonSession> players)
     {
-        var troupe = _prototypeManager.Index(ent.Comp.Troupe);
+        var troupe = PrototypeManager.Index(ent.Comp.Troupe);
 
         var filteredPlayers = players.Where(s => IsPlayerValid(troupe, s)).ToList();
 
@@ -147,8 +166,7 @@ public sealed class ESMaskSystem : ESSharedMaskSystem
                 continue;
             }
 
-            ent.Comp.TroupeMemberMinds.Add(mind);
-            ApplyMask((mind, mindComp), mask.Value);
+            ApplyMask((mind, mindComp), mask.Value, ent);
         }
         return true;
     }
@@ -196,7 +214,7 @@ public sealed class ESMaskSystem : ESSharedMaskSystem
         mask = null;
 
         var weights = new Dictionary<ESMaskPrototype, float>();
-        foreach (var maskProto in _prototypeManager.EnumeratePrototypes<ESMaskPrototype>())
+        foreach (var maskProto in PrototypeManager.EnumeratePrototypes<ESMaskPrototype>())
         {
             if (maskProto.Abstract)
                 continue;
@@ -214,9 +232,9 @@ public sealed class ESMaskSystem : ESSharedMaskSystem
         return true;
     }
 
-    public void ApplyMask(Entity<MindComponent> mind, ProtoId<ESMaskPrototype> maskId)
+    public void ApplyMask(Entity<MindComponent> mind, ProtoId<ESMaskPrototype> maskId, Entity<ESTroupeRuleComponent>? troupe)
     {
-        var mask = _prototypeManager.Index(maskId);
+        var mask = PrototypeManager.Index(maskId);
 
         _role.MindAddRole(mind, MindRole, mind, true);
 
@@ -235,6 +253,19 @@ public sealed class ESMaskSystem : ESSharedMaskSystem
             _chat.ChatMessageToOne(ChatChannel.Server, msg, msg, default, false, session.Channel, Color.Plum);
         }
 
+        if (mind.Comp.OwnedEntity is { } ownedEntity)
+            EntityManager.AddComponents(ownedEntity, mask.Components);
         EntityManager.AddComponents(mind, mask.MindComponents);
+
+        // TODO: eventually, this should be required.
+        if (troupe == null)
+            return;
+
+        troupe.Value.Comp.TroupeMemberMinds.Add(mind);
+
+        foreach (var objective in troupe.Value.Comp.AssociatedObjectives)
+        {
+            _mind.AddObjective(mind, mind, objective);
+        }
     }
 }
