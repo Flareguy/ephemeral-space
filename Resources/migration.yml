@@ -131,7 +131,7 @@ VendingMachineClothes: ESSpawnerRandomWardrobe
 VendingMachineSciDrobe: WardrobeScienceFilled
 VendingMachineRoboDrobe: WardrobeRoboticsFilled
 VendingMachineGeneDrobe: WardrobeGeneticsFilled
-VendingMachineMediDrobe: ESWardrobeMedicalDoctorFilled
+VendingMachineMediDrobe: WardrobeMedicalDoctorFilled
 VendingMachineViroDrobe: WardrobeVirologyFilled
 VendingMachineJaniDrobe: ESWardrobeJanitorFilled
 VendingMachineHydrobe: WardrobeBotanistFilled
