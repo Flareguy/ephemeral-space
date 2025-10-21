@@ -83,7 +83,7 @@ SpeedLoader357: ESSpeedLoader357
 # Initial vendor pruning
 # This does not cover the vendors with explicitly unique purposes that just aren't resprited (like the Liberation Station or the Magivend)
 # Snacks
-RandomVendingSnacks: ESSpawnerRandomVendorSnacks
+RandomVendingSnacks: ESSpawnerRandomVendorSnack
 VendingMachineSnack: ESVendingMachineSnack
 VendingMachineSnackBlue: ESVendingMachineSnackBlue
 VendingMachineSnackGreen: ESVendingMachineSnackGreen
