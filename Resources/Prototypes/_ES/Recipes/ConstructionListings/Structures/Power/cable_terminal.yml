@@ -1,0 +1,9 @@
+- type: construction
+  id: CableTerminal
+  graph: CableTerminal
+  startNode: start
+  targetNode: cable_terminal
+  category: construction-category-utilities
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false

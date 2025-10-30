@@ -1,0 +1,38 @@
+- type: construction
+  id: Firelock
+  graph: Firelock
+  startNode: start
+  targetNode: Firelock
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: FirelockGlass
+  graph: Firelock
+  startNode: start
+  targetNode: FirelockGlass
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: FirelockEdge
+  name: construction-recipe-firelock-edge
+  graph: Firelock
+  startNode: start
+  targetNode: FirelockEdge
+  category: construction-category-structures
+  placementMode: SnapgridCenter
+  objectType: Structure
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked

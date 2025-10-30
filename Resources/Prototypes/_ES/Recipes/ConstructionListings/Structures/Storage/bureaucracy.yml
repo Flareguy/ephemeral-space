@@ -1,0 +1,35 @@
+- type: construction
+  id: FilingCabinet
+  graph: FilingCabinet
+  startNode: start
+  targetNode: filingCabinet
+  category: construction-category-storage
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TallCabinet
+  graph: FilingCabinet
+  startNode: start
+  targetNode: tallCabinet
+  category: construction-category-storage
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: ChestDrawer
+  graph: FilingCabinet
+  startNode: start
+  targetNode: chestDrawer
+  category: construction-category-storage
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked

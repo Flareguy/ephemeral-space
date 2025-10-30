@@ -1,0 +1,9 @@
+- type: construction
+  id: WallmountTelescreen
+  graph: WallmountTelescreen
+  startNode: start
+  targetNode: Telescreen
+  category: construction-category-utilities
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true

@@ -1,0 +1,11 @@
+- type: construction
+  id: Rack
+  graph: Rack
+  startNode: start
+  targetNode: Rack
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked

@@ -1,0 +1,249 @@
+- type: construction
+  id: Table
+  graph: Table
+  startNode: start
+  targetNode: Table
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TableReinforced
+  graph: Table
+  startNode: start
+  targetNode: TableReinforced
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TableGlass
+  graph: Table
+  startNode: start
+  targetNode: TableGlass
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TableCard
+  graph: Table
+  startNode: start
+  targetNode: TableCard
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: TableReinforcedGlass
+  graph: Table
+  startNode: start
+  targetNode: TableReinforcedGlass
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TablePlasmaGlass
+  graph: Table
+  startNode: start
+  targetNode: TablePlasmaGlass
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TableBrass
+  graph: Table
+  startNode: start
+  targetNode: TableBrass
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TableWood
+  graph: Table
+  startNode: start
+  targetNode: TableWood
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TableCarpet
+  graph: Table
+  startNode: start
+  targetNode: TableCarpet
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TableFancyBlack
+  name: construction-recipe-table-fancy-black
+  graph: Table
+  startNode: start
+  targetNode: TableFancyBlack
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TableFancyBlue
+  name: construction-recipe-table-fancy-blue
+  graph: Table
+  startNode: start
+  targetNode: TableFancyBlue
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TableFancySkyBlue
+  name: construction-recipe-table-fancy-sky-blue
+  graph: Table
+  startNode: start
+  targetNode: TableFancySkyBlue
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: TableFancyCyan
+  name: construction-recipe-table-fancy-cyan
+  graph: Table
+  startNode: start
+  targetNode: TableFancyCyan
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TableFancyGreen
+  name: construction-recipe-table-fancy-green
+  graph: Table
+  startNode: start
+  targetNode: TableFancyGreen
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TableFancyOrange
+  name: construction-recipe-table-fancy-orange
+  graph: Table
+  startNode: start
+  targetNode: TableFancyOrange
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TableFancyPurple
+  name: construction-recipe-table-fancy-purple
+  graph: Table
+  startNode: start
+  targetNode: TableFancyPurple
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TableFancyPink
+  name: construction-recipe-table-fancy-pink
+  graph: Table
+  startNode: start
+  targetNode: TableFancyPink
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TableFancyRed
+  name: construction-recipe-table-fancy-red
+  graph: Table
+  startNode: start
+  targetNode: TableFancyRed
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TableFancyWhite
+  name: construction-recipe-table-fancy-white
+  graph: Table
+  startNode: start
+  targetNode: TableFancyWhite
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: TableCounterWood
+  graph: Table
+  startNode: start
+  targetNode: CounterWood
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked

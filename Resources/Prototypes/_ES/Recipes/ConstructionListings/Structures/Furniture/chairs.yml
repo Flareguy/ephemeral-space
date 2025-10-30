@@ -1,0 +1,132 @@
+#chairs
+- type: construction
+  id: Chair
+  graph: Seat
+  startNode: start
+  targetNode: chair
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: Stool
+  graph: Seat
+  startNode: start
+  targetNode: stool
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: StoolBar
+  graph: Seat
+  startNode: start
+  targetNode: stoolBar
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: ChairBrass
+  graph: Seat
+  startNode: start
+  targetNode: chairBrass
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: ChairOfficeLight
+  graph: Seat
+  startNode: start
+  targetNode: chairOffice
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: ChairOfficeDark
+  graph: Seat
+  startNode: start
+  targetNode: chairOfficeDark
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: ChairComfy
+  graph: Seat
+  startNode: start
+  targetNode: chairComfy
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: chairPilotSeat
+  graph: Seat
+  startNode: start
+  targetNode: chairPilotSeat
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: ChairWood
+  graph: Seat
+  startNode: start
+  targetNode: chairWood
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: ChairFolding
+  graph: Seat
+  startNode: start
+  targetNode: chairFolding
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: ToiletEmpty
+  graph: Toilet
+  startNode: start
+  targetNode: toilet
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked

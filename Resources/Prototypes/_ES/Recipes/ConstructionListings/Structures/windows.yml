@@ -1,0 +1,232 @@
+- type: construction
+  id: Window
+  graph: Window
+  startNode: start
+  targetNode: window
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+
+- type: construction
+  id: WindowDiagonal
+  name: construction-window-diagonal
+  graph: WindowDiagonal
+  startNode: start
+  targetNode: windowDiagonal
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+
+- type: construction
+  id: ReinforcedWindow
+  graph: Window
+  startNode: start
+  targetNode: reinforcedWindow
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+
+- type: construction
+  id: ReinforcedWindowDiagonal
+  name: construction-recipe-reinforced-window-diagonal
+  graph: WindowDiagonal
+  startNode: start
+  targetNode: reinforcedWindowDiagonal
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+
+- type: construction
+  id: TintedWindow
+  graph: Window
+  startNode: start
+  targetNode: tintedWindow
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+
+- type: construction
+  id: ClockworkWindow
+  graph: Window
+  startNode: start
+  targetNode: clockworkWindow
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+
+- type: construction
+  id: ClockworkWindowDiagonal
+  name: construction-recipe-clockwork-window-diagonal
+  graph: WindowDiagonal
+  startNode: start
+  targetNode: clockworkWindowDiagonal
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+
+- type: construction
+  id: PlasmaWindow
+  graph: Window
+  startNode: start
+  targetNode: plasmaWindow
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+
+- type: construction
+  id: ReinforcedPlasmaWindow
+  graph: Window
+  startNode: start
+  targetNode: reinforcedPlasmaWindow
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+
+- type: construction
+  id: ShuttleWindow
+  graph: Window
+  startNode: start
+  targetNode: shuttleWindow
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+
+- type: construction
+  id: PlasmaWindowDiagonal
+  name: construction-recipe-plasma-window-diagonal
+  graph: WindowDiagonal
+  startNode: start
+  targetNode: plasmaWindowDiagonal
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+
+- type: construction
+  id: ReinforcedPlasmaWindowDiagonal
+  name: construction-recipe-reinforced-plasma-window-diagonal
+  graph: WindowDiagonal
+  startNode: start
+  targetNode: reinforcedPlasmaWindowDiagonal
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+
+- type: construction
+  id: WindowDirectional
+  graph: WindowDirectional
+  startNode: start
+  targetNode: windowDirectional
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+
+- type: construction
+  id: WindowReinforcedDirectional
+  graph: WindowDirectional
+  startNode: start
+  targetNode: windowReinforcedDirectional
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+
+- type: construction
+  id: WindowClockworkDirectional
+  graph: WindowDirectional
+  startNode: start
+  targetNode: windowClockworkDirectional
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+
+- type: construction
+  id: PlasmaWindowDirectional
+  graph: WindowDirectional
+  startNode: start
+  targetNode: plasmaWindowDirectional
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+
+- type: construction
+  id: PlasmaReinforcedWindowDirectional
+  graph: WindowDirectional
+  startNode: start
+  targetNode: plasmaReinforcedWindowDirectional
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter

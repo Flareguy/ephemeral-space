@@ -1,0 +1,21 @@
+- type: construction
+  id: ESCurtains
+  name: construction-recipe-curtains-cloth
+  graph: Curtains
+  startNode: start
+  targetNode: Curtains
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  id: ESCurtainsFancy
+  name: construction-recipe-curtains-red
+  graph: Curtains
+  startNode: start
+  targetNode: CurtainsFancy
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true

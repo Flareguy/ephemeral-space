@@ -1,0 +1,12 @@
+- type: construction
+  id: StationMap
+  graph: StationMap
+  startNode: start
+  targetNode: station_map
+  category: construction-category-structures
+  placementMode: SnapgridCenter
+  objectType: Structure
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+  - !type:WallmountCondition {}

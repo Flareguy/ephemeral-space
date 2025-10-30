@@ -1,0 +1,143 @@
+- type: construction
+  id: DisposalUnit
+  graph: DisposalMachine
+  startNode: start
+  targetNode: disposal_unit
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  id: MailingUnit
+  graph: DisposalMachine
+  startNode: start
+  targetNode: mailing_unit
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  id: DisposalPipe
+  graph: DisposalPipe
+  startNode: start
+  targetNode: pipe
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  id: DisposalTagger
+  graph: DisposalPipe
+  startNode: start
+  targetNode: tagger
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  id: DisposalSignaller
+  graph: DisposalPipe
+  startNode: start
+  targetNode: signaller
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  id: DisposalTrunk
+  graph: DisposalPipe
+  startNode: start
+  targetNode: trunk
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  id: DisposalRouter
+  graph: DisposalPipe
+  startNode: start
+  targetNode: router
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  mirror: DisposalRouterFlipped
+
+- type: construction
+  hide: true
+  id: DisposalRouterFlipped
+  graph: DisposalPipe
+  startNode: start
+  targetNode: routerflipped
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  mirror: DisposalRouter
+
+- type: construction
+  id: DisposalSignalRouter
+  graph: DisposalPipe
+  startNode: start
+  targetNode: signal_router
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  mirror: DisposalSignalRouterFlipped
+
+- type: construction
+  hide: true
+  id: DisposalSignalRouterFlipped
+  graph: DisposalPipe
+  startNode: start
+  targetNode: signal_router_flipped
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  mirror: DisposalSignalRouter
+
+- type: construction
+  id: DisposalJunction
+  graph: DisposalPipe
+  startNode: start
+  targetNode: junction
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  mirror: DisposalJunctionFlipped
+
+- type: construction
+  hide: true
+  id: DisposalJunctionFlipped
+  graph: DisposalPipe
+  startNode: start
+  targetNode: junctionflipped
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  mirror: DisposalJunction
+
+- type: construction
+  id: DisposalYJunction
+  graph: DisposalPipe
+  startNode: start
+  targetNode: yJunction
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  id: DisposalXJunction
+  graph: DisposalPipe
+  startNode: start
+  targetNode: xJunction
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  id: DisposalBend
+  graph: DisposalPipe
+  startNode: start
+  targetNode: bend
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false

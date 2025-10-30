@@ -1,0 +1,132 @@
+- type: construction
+  id: Girder
+  graph: Girder
+  startNode: start
+  targetNode: girder
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: ReinforcedGirder
+  graph: Girder
+  startNode: start
+  targetNode: reinforcedGirder
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: ClockworkGirder
+  graph: ClockworkGirder
+  startNode: start
+  targetNode: clockGirder
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: Wall
+  graph: Girder
+  startNode: start
+  targetNode: wall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: ReinforcedWall
+  graph: Girder
+  startNode: start
+  targetNode: reinforcedWall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: WallClock
+  graph: ClockworkGirder
+  startNode: start
+  targetNode: clockworkWall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: ShuttleWall
+  graph: Girder
+  startNode: start
+  targetNode: shuttleWall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: DiagonalShuttleWall
+  name: construction-recipe-diagonal-shuttle-wall
+  graph: Girder
+  startNode: start
+  targetNode: diagonalshuttleWall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocke
+
+# ES-specific
+- type: construction
+  id: ESWallTube
+  graph: Girder
+  startNode: start
+  targetNode: ESWallTube
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: ESWallDiagonalTube
+  name: es-construction-recipe-diagonal-tube-wall
+  graph: Girder
+  startNode: start
+  targetNode: ESWallDiagonalTube
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked

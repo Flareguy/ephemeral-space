@@ -1,0 +1,39 @@
+- type: construction
+  id: Shutters
+  graph: Shutters
+  startNode: start
+  targetNode: Shutters
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  id: ShuttersWindow
+  graph: Shutters
+  startNode: start
+  targetNode: ShuttersWindow
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  id: ShuttersRadiation
+  graph: Shutters
+  startNode: start
+  targetNode: ShuttersRadiation
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  id: BlastDoor
+  graph: BlastDoor
+  startNode: start
+  targetNode: blastdoor
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
