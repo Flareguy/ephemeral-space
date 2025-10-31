@@ -1,9 +1,9 @@
 # TODO move this to tiles once tile smoothing is supported
 - type: entity
-  id: CatwalkGrey
+  id: ESCatwalkGrey
   parent: Catwalk
   name: catwalk
-  suffix: grey
+  suffix: ES, grey
   description: A catwalk for easier cable placement.
   components:
   - type: Sprite
