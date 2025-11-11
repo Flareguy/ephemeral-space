@@ -603,3 +603,10 @@ es-names-last-dataset-595 = Loveletter
 es-names-last-dataset-596 = Truk
 es-names-last-dataset-597 = Rortugal
 es-names-last-dataset-598 = Hunkley
+# more wacky names
+es-names-last-dataset-599 = Crowbar
+es-names-last-dataset-599 = Dimmonds
+es-names-last-dataset-599 = Hack
+es-names-last-dataset-600 = Steel
+es-names-last-dataset-599 = Stevens
+es-names-last-dataset-599 = Woodgrain
