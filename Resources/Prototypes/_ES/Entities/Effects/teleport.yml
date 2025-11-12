@@ -39,6 +39,5 @@
     - state: teleport_gray_electric
       color: "#ff5555"
     - state: teleport_gray_center
-    #55ffff
 #  - type: PointLight
 #    color: "#fa2a00"
