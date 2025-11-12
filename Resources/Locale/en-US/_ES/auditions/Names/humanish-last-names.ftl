@@ -603,3 +603,16 @@ es-names-last-dataset-595 = Loveletter
 es-names-last-dataset-596 = Truk
 es-names-last-dataset-597 = Rortugal
 es-names-last-dataset-598 = Hunkley
+# more wacky names
+es-names-last-dataset-599 = Crowbar
+es-names-last-dataset-600 = Dimmonds
+es-names-last-dataset-601 = Hack
+es-names-last-dataset-602 = Radiation
+es-names-last-dataset-603 = Steel
+es-names-last-dataset-604 = Stevens
+es-names-last-dataset-605 = Woodgrain
+es-names-last-dataset-606 = Trial
+es-names-last-dataset-607 = Awesome
+es-names-last-dataset-608 = Bubonic
+es-names-last-dataset-609 = Potato
+es-names-last-dataset-610 = Carrots
