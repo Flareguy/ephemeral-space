@@ -1,0 +1,9 @@
+- type: entity
+  id: ShuttleHeater
+  parent: BaseStructure
+  name: engine heater
+  description: An ancient marble statue. The subject is depicted with a floor-length braid and is wielding a red toolbox.
+  components:
+  - type: Sprite
+    sprite: _ES/Structures/Shuttles/heater.rsi
+    state: heater
