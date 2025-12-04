@@ -3933,7 +3933,7 @@ entities:
     - type: Transform
       pos: 23.5,3.5
       parent: 1
-- proto: ShuttleHeater
+- proto: ESShuttleHeater
   entities:
   - uid: 79
     components:
