@@ -1,8 +1,8 @@
 - type: entity
-  id: ShuttleHeater
+  id: ESShuttleHeater
   parent: BaseStructure
   name: engine heater
-  description: An ancient marble statue. The subject is depicted with a floor-length braid and is wielding a red toolbox.
+  description: Improves the long-term efficiency of thrusters, making them less likely to degrade over the course of years of extended use.
   components:
   - type: Sprite
     sprite: _ES/Structures/Shuttles/heater.rsi

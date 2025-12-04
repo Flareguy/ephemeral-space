@@ -58,18 +58,14 @@
 - type: entity
   id: ESShuttleWindowDirectionalArrivals
   parent: BaseStructure
-  name: hyper-reinforced directional shuttle window
+  name: hyper-reinforced directional window
   description: Effectively impervious to conventional means of destruction.
   placement:
     mode: SnapgridCenter
     snap:
     - Window
   components:
-  # ES START
-  # - type: WallMount
-  #  arc: 360
   - type: ESInteractionIgnoreAnchoredInTile
-  # ES END
   - type: Tag
     tags:
       - Window
@@ -79,11 +75,11 @@
         collection: GlassSmack
   - type: Sprite
     drawdepth: Mobs
-    sprite: _ES/Structures/Windows/shuttle_directional.rsi
-    state: shuttle
+    sprite: Structures/Windows/directional.rsi
+    state: reinforced_window
   - type: Icon
-    sprite: _ES/Structures/Windows/shuttle_directional.rsi
-    state: shuttle
+    sprite: Structures/Windows/directional.rsi
+    state: reinforced_window
   - type: InteractionPopup
     interactSuccessString: comp-window-knock
     messagePerceivedByOthers: comp-window-knock
@@ -101,7 +97,6 @@
         - FullTileMask
         layer:
         - GlassLayer
-  - type: Repairable
   - type: Airtight
     noAirWhenFullyAirBlocked: false
     airBlockedDirection:
