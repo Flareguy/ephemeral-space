@@ -85,7 +85,7 @@
     boardName: wires-board-name-computer
     layoutId: Computer
 # ES Start
- -  type: ESSparkOnHit
+  - type: ESSparkOnHit
     prob: 0.25
     count: 2
 # ES End
