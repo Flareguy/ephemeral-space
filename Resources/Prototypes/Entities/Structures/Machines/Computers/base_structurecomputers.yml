@@ -24,6 +24,9 @@
     sprite: Structures/Machines/computers.rsi
 # ES START
     noRot: true
+  - type: ESSparkOnHit
+    prob: 0.25
+    count: 2
 # ES END
     layers:
     - map: ["computerLayerBody"]
