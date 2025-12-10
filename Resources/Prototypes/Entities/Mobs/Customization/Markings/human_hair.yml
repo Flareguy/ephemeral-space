@@ -466,13 +466,13 @@
   sprites:
     - sprite: _ES/Mobs/Customization/human_hair.rsi
       state: dandypompadour
- - type: marking
-   id: HumanHairDevilock
-   bodyPart: Hair
-   markingCategory: Hair
-   sprites:
-     - sprite: _ES/Mobs/Customization/human_hair.rsi
-       state: devilock
+- type: marking
+  id: HumanHairDevilock
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _ES/Mobs/Customization/human_hair.rsi
+      state: devilock
 - type: marking
   id: HumanHairDoublebun
   bodyPart: Hair
@@ -669,13 +669,13 @@
   sprites:
     - sprite: _ES/Mobs/Customization/human_hair.rsi
       state: himeup
- - type: marking
-   id: HumanHairHitop
-   bodyPart: Hair
-   markingCategory: Hair
-   sprites:
-     - sprite: _ES/Mobs/Customization/human_hair.rsi
-       state: hitop
+- type: marking
+  id: HumanHairHitop
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _ES/Mobs/Customization/human_hair.rsi
+      state: hitop
 # - type: marking
   # id: HumanHairJade
   # bodyPart: Hair
