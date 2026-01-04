@@ -4,8 +4,8 @@ meta:
   engineVersion: 270.0.0
   forkId: ""
   forkVersion: ""
-  time: 01/04/2026 00:14:14
-  entityCount: 14587
+  time: 01/04/2026 00:20:11
+  entityCount: 14586
 maps:
 - 3
 grids:
@@ -4888,7 +4888,7 @@ entities:
       pos: -11.5,1.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -9646.69
+      secondsUntilStateChange: -9991.19
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -30485,7 +30485,7 @@ entities:
   - uid: 431
     components:
     - type: Transform
-      pos: -0.5,-45.5
+      pos: 7.5,-42.5
       parent: 2
 - proto: ClosetChefFilled
   entities:
@@ -64411,7 +64411,7 @@ entities:
   - uid: 3947
     components:
     - type: Transform
-      pos: 7.5,-42.5
+      pos: 2.5,-5.5
       parent: 2
   - uid: 6725
     components:
@@ -64435,11 +64435,6 @@ entities:
     components:
     - type: Transform
       pos: -0.5,-58.5
-      parent: 2
-  - uid: 14587
-    components:
-    - type: Transform
-      pos: 2.5,-5.5
       parent: 2
 - proto: MaintenanceFluffSpawner
   entities:
