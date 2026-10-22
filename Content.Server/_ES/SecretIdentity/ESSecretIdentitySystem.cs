@@ -5,6 +5,7 @@ using Content.Server.GameTicking;
 using Content.Server.Station.Systems;
 using Content.Shared._ES.Auditions.Components;
 using Content.Shared._ES.Chat;
+using Content.Shared._ES.Objectives.Components;
 using Content.Shared._ES.SecretIdentity;
 using Content.Shared._ES.SecretIdentity.Components;
 using Content.Shared._ES.Stagehand;
@@ -67,6 +68,7 @@ public sealed partial class ESSecretIdentitySystem : ESSharedSecretIdentitySyste
         foreach (var organization in organizations)
         {
             var organizationProto = PrototypeManager.Index(organization.Comp.Organization);
+            var organizationObjectives = Objective.GetObjectives(organization.Owner);
 
             ev.AddLine(Loc.GetString("es-roundend-secret-identity-player-group",
                 ("name", Loc.GetString(organizationProto.Name)),
@@ -85,7 +87,8 @@ public sealed partial class ESSecretIdentitySystem : ESSharedSecretIdentitySyste
 
                 // get secret-identity-specific objectives
                 var objectives = Objective.GetObjectives(mind)
-                    .Except(Objective.GetObjectives(organization.Owner))
+                    .Except(organizationObjectives)
+                    .Where(e => !HasComp<ESHideSummaryObjectiveComponent>(e))
                     .ToList();
 
                 ev.AddLine(Loc.GetString("es-roundend-secret-identity-player-summary",
@@ -204,6 +207,10 @@ public sealed partial class ESSecretIdentitySystem : ESSharedSecretIdentitySyste
             if (!Objective.TryAddObjective(mind.Owner, objective, out var objectiveUid))
                 continue;
 
+            var comp = EnsureComp<ESSecretIdentityObjectiveComponent>(objectiveUid.Value);
+            comp.AssociatedIdentity = secretIdentityId;
+            Dirty(objectiveUid.Value, comp);
+
             Objective.SetDescriptor(
                 objectiveUid.Value,
                 Loc.GetString("es-objective-text-secret-identity"),
@@ -306,6 +313,9 @@ public sealed partial class ESSecretIdentitySystem : ESSharedSecretIdentitySyste
 
         foreach (var objective in Objective.GetOwnedObjectives<ESSecretIdentityObjectiveComponent>(mind.Owner))
         {
+            if (objective.Comp.TransferBetweenIdentities)
+                continue;
+
             Objective.TryRemoveObjective(mind.Owner, objective.Owner);
         }
 
@@ -349,15 +359,3 @@ public sealed partial class ESSecretIdentitySystem : ESSharedSecretIdentitySyste
         }
     }
 }
-
-/// <summary>
-/// Raised on a organization entity and broadcast when an entity's secret identity changes.
-/// </summary>
-/// <remarks>
-/// This is raised both when an identity is removed, and when a new one is applied.
-/// So, it will be raised twice if something fully changes an entity's secret identity (e.g. conversion)
-/// When being removed, <see cref="NewSecretIdentity"/> will be null, and <see cref="OldSecretIdentity"/> will have the old identity,
-/// and vice versa for being applied.
-/// </remarks>
-[ByRefEvent]
-public record struct ESSecretIdentityChangedEvent(Entity<MindComponent> Mind, ESSecretIdentityPrototype? NewSecretIdentity, ESSecretIdentityPrototype? OldSecretIdentity);

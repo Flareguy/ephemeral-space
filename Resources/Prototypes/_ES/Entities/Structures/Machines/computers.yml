@@ -34,10 +34,6 @@
         computerLayerKeys:
           True: { visible: true, shader: unshaded }
           False: { visible: true, shader: shaded }
-      enum.WiresVisuals.MaintenancePanelState:
-        enum.WiresVisualLayers.MaintenancePanel:
-          True: { visible: false }
-          False: { visible: true }
   - type: Physics
     bodyType: Static
   - type: Fixtures
@@ -79,6 +75,7 @@
     powerLoad: 200
   - type: ExtensionCableReceiver
   - type: ActivatableUIRequiresPower
+  - type: ESForcedFacingUi
   - type: LightningTarget
     priority: 1
   - type: RequireProjectileTarget
@@ -255,7 +252,6 @@
   - type: PointLight
     color: "#ffff55"
   - type: ESEmergencyAccessConsole
-  - type: ESSabotageTarget
   - type: UseDelay
     delay: 0.5
   - type: ActivatableUI
@@ -301,4 +297,6 @@
     netsync: false
     maxCharge: 600
   - type: ExaminableBattery
+  - type: ESNavigationConsole
+  - type: ESSabotageTarget
   - type: ESAmbientMusicMarkerCommand

@@ -2,7 +2,6 @@ using System.Linq;
 using Content.Shared._ES.Auditions.Components;
 using Content.Shared._ES.CCVar;
 using Content.Shared._ES.Random;
-using Content.Shared.Body;
 using Content.Shared.Dataset;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
@@ -15,7 +14,6 @@ using JetBrains.Annotations;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
-using YamlDotNet.Core;
 
 namespace Content.Shared._ES.Auditions;
 
@@ -118,6 +116,8 @@ public abstract partial class ESSharedAuditionsSystem
 
         var profile = HumanoidCharacterProfile.DefaultWithSpecies(speciesId).WithSex(sex).WithGender(gender);
 
+        profile.Traits = _trait.GetRandomTraits(random);
+
         var skinColors = species.SkinColors.Select(_prototypeManager.Index).ToList();
         var weightedSkinColors = skinColors.Select(prototype => (prototype, prototype.Weight)).ToDictionary();
 
@@ -159,17 +159,15 @@ public abstract partial class ESSharedAuditionsSystem
 
         Marking? hairMarking = null;
         Marking? facialHairMarking = null;
-        if (hairOptions.Any())
+        if (hairOptions.Any() && !random.Prob(BaldChance))
             hairMarking = new Marking(random.Pick(hairOptions), new[] { hairColor });
-        if (random.Prob(BaldChance))
-            hairMarking = null;
 
         if (sex != Sex.Female && !random.Prob(ShavenChance))
         {
             var facialHairStyles = _marking
                 .MarkingsByLayerAndGroupAndSex(HumanoidVisualLayers.FacialHair, speciesId.Value.Id, sex)
                 .Keys.ToList(); // species -> markings group is a hack but idrc
-            hairMarking = new Marking(random.Pick(facialHairStyles), new[] { hairColor });
+            facialHairMarking = new Marking(random.Pick(facialHairStyles), new[] { hairColor });
         }
 
         var headMarkings = new Dictionary<HumanoidVisualLayers, List<Marking>>();

@@ -199,12 +199,15 @@
     - id: Jerrycan
 
     - id: ESFingerprintKit
+    - id: ESFiberKit
 
     - id: ClothingEyesHudMedical
     - tableId: FillWelderSupplies # Welding masks
     - id: ClothingBeltUtility
       weight: 2
     - id: ESClothingHeadHelmetSecurity
+    - id: ESClothingOuterArmorSecurity
+      weight: 0.5
 
     - id: DefaultStationBeaconUnanchored
     - tableId: ESSoap

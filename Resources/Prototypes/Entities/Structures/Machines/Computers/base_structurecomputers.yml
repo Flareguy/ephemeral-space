@@ -13,6 +13,7 @@
     powerLoad: 100
   - type: ExtensionCableReceiver
   - type: ActivatableUIRequiresPower
+  - type: ESForcedFacingUi
   - type: Sprite
     sprite: Structures/Machines/computers.rsi
 # ES START
@@ -39,10 +40,6 @@
         computerLayerKeys:
           True: { visible: true, shader: unshaded }
           False: { visible: true, shader: shaded }
-      enum.WiresVisuals.MaintenancePanelState:
-        enum.WiresVisualLayers.MaintenancePanel:
-          True: { visible: false }
-          False: { visible: true }
   - type: LitOnPowered
   - type: PointLight
     radius: 1.26
@@ -95,7 +92,7 @@
     count: 2
   - type: ESSparkOnHit
     prob: 0.25
-    tileFireChance: 0.2
+    tileFireChance: 0.4
     count: 2
 # ES End
 #

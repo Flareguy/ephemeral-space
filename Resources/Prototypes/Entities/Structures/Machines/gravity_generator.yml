@@ -65,8 +65,10 @@
       unpowered: "off"
       off: "off"
       on: "on"
+  - type: ESSabotageTarget
   - type: ActivatableUI
     key: enum.PowerChargeUiKey.Key
+  - type: ESForcedFacingUi
   - type: ActivatableUIRequiresPower
   - type: UserInterface
     interfaces:
