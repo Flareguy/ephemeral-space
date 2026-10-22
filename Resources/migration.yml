@@ -646,6 +646,10 @@ ESComputerSupplyRequestTabletopService: null
 DrinkGildlagerBottleFull: null
 DrinkSyndicatebomb: null
 
+# 2026-10-15
+# Wall removal
+WallClown: WallSolid
+
 # ES END
 
 # 2026-01-07
